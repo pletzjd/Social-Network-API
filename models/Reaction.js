@@ -28,15 +28,11 @@ const reactionSchema = new Schema(
   },
   {
     toJSON: {
-      virtuals: true,
+      getters: true,
     },
   }
 );
 
-// Virtual to count number of friends
-reactionSchema.virtual('friendCount').get(function () {
-    return this.friends.length;
-  });
 
 const Reaction = model('reaction', reactionSchema);
 
