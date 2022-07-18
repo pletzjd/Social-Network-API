@@ -13,3 +13,5 @@ users.route('/:userId')
 users.route('/:userId/friends/:friendId')
     .post(addFriend)
     .delete(removeFriend);
+
+module.exports = users;
